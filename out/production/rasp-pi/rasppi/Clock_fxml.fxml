@@ -27,7 +27,7 @@
     </padding>
     <children>
         <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="September 12"
+              strokeWidth="0.0" text="${controller.date}"
               GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
             <font>
                 <Font name="Helvetica Neue Thin" size="17.0"/>
@@ -38,7 +38,7 @@
         </Text>
 
         <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="Wednesday"
+              strokeWidth="0.0" text="${controller.day}"
               GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
             <font>
                 <Font name="Helvetica Neue Thin" size="17.0"/>

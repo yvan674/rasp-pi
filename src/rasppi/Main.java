@@ -37,36 +37,7 @@ public class Main extends Application {
 
         // runClock();
     }
-/*
-    private void runClock() {
-        boolean running = true;
-        new Thread() {
-            public void run() {
-                long last = System.nanoTime();
 
-                while (running) {
-                    double delta = 0;
-                    long now = System.nanoTime();
-                    delta += (now - last) / 1000000000.0;
-                    last = now;
-
-                    while (delta >= 1) {
-                        int[] time = new int[2];
-                        time[0] = LocalTime.now().getHour();
-                        time[1] = LocalTime.now().getMinute();
-                        // time to string
-                        StringBuilder build = new StringBuilder();
-                        build.append(time[0]);
-                        build.append(":");
-                        build.append(time[1]);
-                        Controller.setTime(build.toString());
-                        System.out.println(build.toString());
-                    }
-                }
-            }
-        }.start();
-    }
-    */
     public static void main(String[] args) {
         launch(args);
     }
