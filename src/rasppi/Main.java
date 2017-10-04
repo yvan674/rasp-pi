@@ -35,9 +35,9 @@ public class Main extends Application {
             }
         });
 
-        runClock();
+        // runClock();
     }
-
+/*
     private void runClock() {
         boolean running = true;
         new Thread() {
@@ -66,6 +66,7 @@ public class Main extends Application {
             }
         }.start();
     }
+    */
     public static void main(String[] args) {
         launch(args);
     }
