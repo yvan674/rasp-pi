@@ -13,18 +13,22 @@ public class Clock {
         // simple month to get human-friendly month
         SimpleDateFormat simpleMonth = new SimpleDateFormat("MMMM d");
 
-        // create return string
+        // returns formatted string of the "now" date
         return simpleMonth.format(now);
     }
 
     public static String getDay(Date now) {
+        // simple day to get human-friendly day name
         SimpleDateFormat simpleDay = new SimpleDateFormat("EEEE");
+
+        // returns formatted string of the "now" date
         return simpleDay.format(now);
     }
 
     public static String getTime(Date now) {
+        // Simple time to get a formatted version of the time
         SimpleDateFormat simpleTime = new SimpleDateFormat("HH:mm");
-        // get time
+        // returns formatted string of the "now" date
         return simpleTime.format(now);
     }
 }

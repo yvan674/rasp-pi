@@ -43,14 +43,6 @@
           endY="268"/>
     <!-- end of the borders -->
 
-    <!-- the close button -->
-    <Button fx:id="closeButton"
-            id="close-button"
-            onAction="#closeButtonPressed"
-            layoutX="425"
-            layoutY="8"/>
-    <!-- end of the close button -->
-
     <!-- all the buttons -->
     <Button fx:id="superCruiseButton"
             id="superCruise-button"
@@ -83,7 +75,7 @@
             layoutY="182"
             onAction="#fsdPressed"/>
     <Button fx:id="systemButton"
-            id="fsd-button"
+            id="system-button"
             styleClass="button"
             layoutX="149"
             layoutY="178"
@@ -101,6 +93,14 @@
             layoutY="181"
             onAction="#repairPressed"/>
     <!-- end of all the buttons -->
+
+    <!-- the close button -->
+    <Button fx:id="closeButton"
+            id="close-button"
+            onAction="#closeButtonPressed"
+            layoutX="425"
+            layoutY="8"/>
+    <!-- end of the close button -->
 
     <stylesheets>
         <URL value="@elite.css"/>

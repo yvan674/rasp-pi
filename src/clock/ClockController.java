@@ -3,7 +3,6 @@ package clock;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,22 +23,26 @@ import java.util.Date;
  * controller module allows for all the actions that relate to the FXML
  */
 public class ClockController {
-    // clock and date variables
-    @FXML private Text Time;
-    @FXML private Text Day;
-    @FXML private Text Date;
-
     // right pane pressedState
     private static boolean pressedState = false;
-
+    // clock and date variables
+    @FXML
+    private Text Time;
+    @FXML
+    private Text Day;
+    @FXML
+    private Text Date;
     // sidebar objects
-    @FXML private Button expandButton;
-    @FXML private Pane rightPane;
-    @FXML private Button eliteButton;
+    @FXML
+    private Button expandButton;
+    @FXML
+    private Pane rightPane;
+    @FXML
+    private Button eliteButton;
 
 
     @FXML
-    protected void expandButtonPressed (ActionEvent event) throws IOException{
+    protected void expandButtonPressed(ActionEvent event) throws IOException {
         /* action for when the expand button is pressed */
         // sets the current state
         pressedState = !pressedState;
@@ -51,10 +54,11 @@ public class ClockController {
     @FXML
     protected void eliteButtonPressed(ActionEvent event) throws IOException {
         /* action for when the elite logo button is pressed */
+        // if it's pressed, change the scene
 
         // reset pressed state of the expand button
         pressedState = !pressedState;
-        // if it's pressed, change the scene
+
         // get the current stage
         Stage stage = (Stage) eliteButton.getScene().getWindow();
 
@@ -65,10 +69,8 @@ public class ClockController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-        // debug
-        System.out.println("Elite logo was pressed");
     }
+
     @FXML
     public void initialize() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0), event -> {
