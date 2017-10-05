@@ -12,7 +12,7 @@ import javafx.util.Duration;
  * Copyright (C) 2017.
  */
 public class Transitions {
-    static void rightPaneTransition(Button button, Pane pane, boolean state) {
+    public static void rightPaneTransition(Button button, Pane pane, boolean state) {
         /* Transition to move the right pane of the clock. */
         // button rotation transition object
         RotateTransition rotate = new RotateTransition(Duration.millis(150), button);

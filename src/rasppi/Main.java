@@ -1,17 +1,12 @@
 package rasppi;
 
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import javafx.util.Duration;
 
 /**
  * Created by Yvan on 3.10.17.
@@ -24,12 +19,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Clock_fxml.fxml"));
+        Parent clockRoot = FXMLLoader.load(getClass().getResource("../clock/Clock_fxml.fxml"));
+        Parent eliteRoot = FXMLLoader.load(getClass().getResource("../elite/Elite_fxml.fxml"));
 
-        Scene scene = new Scene(root, 480, 320);
+        Scene clock = new Scene(clockRoot, 480, 320);
+        Scene elite = new Scene(eliteRoot, 480, 320);
 
         stage.setTitle("Rasp Pi");
-        stage.setScene(scene);
+        stage.setScene(clock);
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent arg0) {
