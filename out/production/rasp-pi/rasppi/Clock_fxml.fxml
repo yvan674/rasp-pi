@@ -26,8 +26,11 @@
         <Insets left="18.0"/>
     </padding>
     <children>
-        <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="${controller.date}"
+        <Text fx:id="Date"
+              fill="WHITE"
+              fontSmoothingType="LCD"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0"
               GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
             <font>
                 <Font name="Helvetica Neue Thin" size="17.0"/>
@@ -37,8 +40,11 @@
             </GridPane.margin>
         </Text>
 
-        <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="${controller.day}"
+        <Text fx:id="Day"
+              fill="WHITE"
+              fontSmoothingType="LCD"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0"
               GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
             <font>
                 <Font name="Helvetica Neue Thin" size="17.0"/>
@@ -48,8 +54,11 @@
             </GridPane.margin>
         </Text>
 
-        <Text fx:id="Time" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-              strokeWidth="0.0" text="${controller.time}"
+        <Text fx:id="Time"
+              fill="WHITE"
+              fontSmoothingType="LCD"
+              strokeType="OUTSIDE"
+              strokeWidth="0.0"
               GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="BOTTOM">
             <font>
                 <Font name="Helvetica Neue Thin" size="72.0"/>

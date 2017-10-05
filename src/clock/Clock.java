@@ -13,23 +13,6 @@ import java.util.Date;
  * This is the module that acts as a clock and can be used to quickly get the date
  */
 public class Clock {
-    // main timeline
-
-    private AnimationTimer timer = new AnimationTimer() {
-        @Override
-        public void handle(long now) {
-
-        }
-    };
-
-
-    // debug main
-    public static void main(String[] args) {
-        getClock();
-        Date now = new Date();
-        Date(now);
-        Day(now);
-    }
     public static String Date(Date now) {
         // declare variables
         String date[] = new String[2];
@@ -41,17 +24,13 @@ public class Clock {
         // get date and month
         // simple month to get human-friendly month
         SimpleDateFormat simpleMonth = new SimpleDateFormat("MMMM");
-        // the date uses the calendar
-        date[1] = Integer.toString(cal.get(Calendar.DAY_OF_MONTH));
-        date[0] = simpleMonth.format(now);
-        // debug
-        System.out.println(date[0]);
-        System.out.println(date[1]);
 
         // create return string
-        builder.append(date[0]);
+        builder.append(simpleMonth.format(now));
         builder.append(" ");
-        builder.append(date[1]);
+
+        // the date uses the calendar
+        builder.append(Integer.toString(cal.get(Calendar.DAY_OF_MONTH)));
         return builder.toString();
 
     }
