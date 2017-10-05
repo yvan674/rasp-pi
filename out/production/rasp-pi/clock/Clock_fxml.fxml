@@ -29,7 +29,7 @@
     <padding>
         <Insets left="18.0"/>
     </padding>
-    <children>
+        <!-- The clock elements -->
         <Text fx:id="Date"
               fill="WHITE"
               fontSmoothingType="LCD"
@@ -73,7 +73,8 @@
                 <Font name="Helvetica Neue Thin" size="72.0"/>
             </font>
         </Text>
-
+        <!-- end of the clock elements -->
+        <!-- the shortcut pane -->
         <Pane id="right-pane" fx:id="rightPane"
               GridPane.columnIndex="1"
               GridPane.rowSpan="6"
@@ -88,7 +89,8 @@
 
             </children>
         </Pane>
-
+        <!-- end of the shortcut pane -->
+        <!-- the expand button and its elements -->
         <Circle id="expand-shadow"
                 radius="24"
                 GridPane.columnIndex="1"
@@ -103,10 +105,8 @@
                 GridPane.valignment="CENTER"
                 GridPane.halignment="CENTER"
                 translateY="10"
-                onAction="#expandButtonPressed"
-        />
-
-    </children>
+                onAction="#expandButtonPressed"/>
+        <!-- end of the expand button -->
     <stylesheets>
         <URL value="@clock.css"/>
     </stylesheets>

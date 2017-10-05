@@ -1,0 +1,58 @@
+.root {
+    -fx-background-color: black;
+}
+
+.borders {
+    -fx-effect: dropshadow(gaussian, rgba(245, 157, 2, 1), 40, 0.4, 0, 0);
+}
+
+.button {
+    -fx-effect: dropshadow(gaussian, rgba(245, 157, 2, 0.55), 50, 0.5, 0, 0);
+    -fx-translate-x: -5;
+}
+
+#close-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/close.png");
+    -fx-effect: dropshadow(gaussian, rgba(245, 157, 2, 1), 30, 0.5, 0, 0);
+}
+
+#superCruise-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/supercruise.png");
+}
+
+#map-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/map.png");
+}
+
+#universal-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/universal.png");
+}
+
+#abort-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/abort.png");
+}
+
+#fsd-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/fsd.png");
+}
+
+#map-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/map.png");
+}
+
+#dock-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/dock.png");
+}
+
+#repair-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/repair.png");
+}

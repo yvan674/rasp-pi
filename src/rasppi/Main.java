@@ -15,8 +15,6 @@ import javafx.stage.WindowEvent;
  * Main state machine for the program
  */
 public class Main extends Application {
-    private boolean running;
-
     @Override
     public void start(Stage stage) throws Exception {
         Parent clockRoot = FXMLLoader.load(getClass().getResource("../clock/Clock_fxml.fxml"));
@@ -30,7 +28,6 @@ public class Main extends Application {
         stage.show();
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent arg0) {
-                running = false;
                 stage.close();
             }
         });

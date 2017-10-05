@@ -6,11 +6,16 @@ import javafx.animation.Timeline;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.util.Date;
 
 /**
@@ -19,9 +24,6 @@ import java.util.Date;
  * controller module allows for all the actions that relate to the FXML
  */
 public class ClockController {
-    @FXML private Button expandButton;
-    @FXML private Pane rightPane;
-
     // clock and date variables
     @FXML private Text Time;
     @FXML private Text Day;
@@ -30,9 +32,14 @@ public class ClockController {
     // right pane pressedState
     private static boolean pressedState = false;
 
+    // sidebar objects
+    @FXML private Button expandButton;
+    @FXML private Pane rightPane;
+    @FXML private Button eliteButton;
+
 
     @FXML
-    protected void expandButtonPressed (ActionEvent event) {
+    protected void expandButtonPressed (ActionEvent event) throws IOException{
         /* action for when the expand button is pressed */
         // sets the current state
         pressedState = !pressedState;
@@ -42,11 +49,22 @@ public class ClockController {
     }
 
     @FXML
-    protected void eliteButtonPressed(ActionEvent event) {
+    protected void eliteButtonPressed(ActionEvent event) throws IOException {
         /* action for when the elite logo button is pressed */
 
+        // reset pressed state of the expand button
+        pressedState = !pressedState;
         // if it's pressed, change the scene
-        // todo
+        // get the current stage
+        Stage stage = (Stage) eliteButton.getScene().getWindow();
+
+        // set new root to have the elite fxml file
+        Parent root = FXMLLoader.load(getClass().getResource("../elite/Elite_fxml.fxml"));
+
+        // create the new scene with the new fxml file
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
         // debug
         System.out.println("Elite logo was pressed");
