@@ -20,10 +20,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent clockRoot = FXMLLoader.load(getClass().getResource("../clock/Clock_fxml.fxml"));
-        Parent eliteRoot = FXMLLoader.load(getClass().getResource("../elite/Elite_fxml.fxml"));
+        //Parent eliteRoot = FXMLLoader.load(getClass().getResource("../elite/Elite_fxml.fxml"));
 
         Scene clock = new Scene(clockRoot, 480, 320);
-        Scene elite = new Scene(eliteRoot, 480, 320);
+        //Scene elite = new Scene(eliteRoot, 480, 320);
 
         stage.setTitle("Rasp Pi");
         stage.setScene(clock);

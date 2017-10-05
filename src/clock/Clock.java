@@ -1,8 +1,6 @@
 package clock;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -11,21 +9,22 @@ import java.util.Date;
  * This is the module that acts as a clock and can be used to quickly get the date
  */
 public class Clock {
-    public static String Date(Date now) {
+    public static String getDate(Date now) {
         // simple month to get human-friendly month
-        SimpleDateFormat simpleMonth = new SimpleDateFormat("MMMM");
+        SimpleDateFormat simpleMonth = new SimpleDateFormat("MMMM d");
 
         // create return string
-        return simpleMonth.format(now) + " " + LocalDate.now().getDayOfMonth();
+        return simpleMonth.format(now);
     }
 
-    public static String Day(Date now) {
+    public static String getDay(Date now) {
         SimpleDateFormat simpleDay = new SimpleDateFormat("EEEE");
         return simpleDay.format(now);
     }
 
-    public static String getClock() {
+    public static String getTime(Date now) {
+        SimpleDateFormat simpleTime = new SimpleDateFormat("HH:mm");
         // get time
-        return LocalTime.now().getHour() + ":" + LocalTime.now().getMinute();
+        return simpleTime.format(now);
     }
 }

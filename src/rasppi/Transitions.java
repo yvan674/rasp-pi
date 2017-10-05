@@ -15,7 +15,7 @@ public class Transitions {
     public static void rightPaneTransition(Button button, Pane pane, boolean state) {
         /* Transition to move the right pane of the clock. */
         // button rotation transition object
-        RotateTransition rotate = new RotateTransition(Duration.millis(150), button);
+        RotateTransition rotate = new RotateTransition(Duration.millis(180), button);
         rotate.setInterpolator(Interpolator.EASE_BOTH);
 
         // pane translate transition object

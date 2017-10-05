@@ -79,7 +79,15 @@
               GridPane.rowSpan="6"
               GridPane.halignment="RIGHT"
               GridPane.valignment="TOP"
-              translateX="100"/>
+              translateX="100">
+            <children>
+                <VBox>
+                    <Button id="elite-button" fx:id="eliteButton"
+                            onAction="#eliteButtonPressed"/>
+                </VBox>
+
+            </children>
+        </Pane>
 
         <Circle id="expand-shadow"
                 radius="24"
