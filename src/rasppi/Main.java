@@ -1,14 +1,17 @@
 package rasppi;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
-import java.time.LocalTime;
+import javafx.util.Duration;
 
 /**
  * Created by Yvan on 3.10.17.
@@ -20,7 +23,7 @@ public class Main extends Application {
     private boolean running;
 
     @Override
-    public void start(Stage stage) throws Exception{
+    public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Clock_fxml.fxml"));
 
         Scene scene = new Scene(root, 480, 320);
@@ -34,8 +37,6 @@ public class Main extends Application {
                 stage.close();
             }
         });
-
-        // runClock();
     }
 
     public static void main(String[] args) {

@@ -1,10 +1,8 @@
 package clock;
 
 import javafx.animation.AnimationTimer;
-import javafx.animation.Timeline;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
@@ -16,12 +14,18 @@ import java.util.Date;
  */
 public class Clock {
     // main timeline
-    private Timeline timeline;
-    private AnimationTimer timer;
+
+    private AnimationTimer timer = new AnimationTimer() {
+        @Override
+        public void handle(long now) {
+
+        }
+    };
+
 
     // debug main
     public static void main(String[] args) {
-        runClock();
+        getClock();
         Date now = new Date();
         Date(now);
         Day(now);
@@ -58,7 +62,7 @@ public class Clock {
         return simpleDate.format(now);
     }
 
-    public static void runClock() {
+    public static String getClock() {
         // get time
         int time[] = new int[2];
         time[0] = LocalTime.now().getHour();
@@ -68,7 +72,7 @@ public class Clock {
         builder.append(time[0]);
         builder.append(':');
         builder.append(time[1]);
-        rasppi.Controller.setTime(builder.toString());
-        System.out.println(builder.toString());
+        return builder.toString();
     }
+
 }
