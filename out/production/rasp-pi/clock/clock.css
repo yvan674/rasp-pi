@@ -27,3 +27,9 @@
     -fx-background-color: transparent;
     -fx-graphic: url("media/elite-logo.png");
 }
+
+#sleep-button {
+    -fx-background-color: transparent;
+    -fx-graphic: url("media/sleep.png");
+    -fx-translate-x: 2px;
+}

@@ -85,6 +85,8 @@
                 <VBox>
                     <Button id="elite-button" fx:id="eliteButton"
                             onAction="#eliteButtonPressed"/>
+                    <Button id="sleep-button" fx:id="sleepButton"
+                            onAction="#sleepButtonPressed"/>
                 </VBox>
 
             </children>

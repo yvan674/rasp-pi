@@ -72,6 +72,13 @@ public class ClockController {
     }
 
     @FXML
+    protected void sleepButtonPressed(ActionEvent event) {
+        // todo
+
+        //debug
+        System.out.println("Sleep button pressed");
+    }
+    @FXML
     public void initialize() {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0), event -> {
             // set date variable
