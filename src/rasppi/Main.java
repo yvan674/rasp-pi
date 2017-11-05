@@ -26,11 +26,6 @@ public class Main extends Application {
         stage.setTitle("Rasp Pi");
         stage.setScene(clock);
         stage.show();
-        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle(WindowEvent arg0) {
-                stage.close();
-            }
-        });
     }
 
     public static void main(String[] args) {
