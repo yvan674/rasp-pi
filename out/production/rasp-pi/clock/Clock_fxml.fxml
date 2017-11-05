@@ -74,41 +74,6 @@
             </font>
         </Text>
         <!-- end of the clock elements -->
-        <!-- the shortcut pane -->
-        <Pane id="right-pane" fx:id="rightPane"
-              GridPane.columnIndex="1"
-              GridPane.rowSpan="6"
-              GridPane.halignment="RIGHT"
-              GridPane.valignment="TOP"
-              translateX="100">
-            <children>
-                <VBox>
-                    <Button id="elite-button" fx:id="eliteButton"
-                            onAction="#eliteButtonPressed"/>
-                    <Button id="sleep-button" fx:id="sleepButton"
-                            onAction="#sleepButtonPressed"/>
-                </VBox>
-
-            </children>
-        </Pane>
-        <!-- end of the shortcut pane -->
-        <!-- the expand button and its elements -->
-        <Circle id="expand-shadow"
-                radius="24"
-                GridPane.columnIndex="1"
-                GridPane.rowSpan="3" GridPane.rowIndex="3"
-                GridPane.valignment="CENTER" GridPane.halignment="CENTER"
-                translateY="10"/>
-
-        <Button id="expand-button" fx:id="expandButton"
-                GridPane.columnIndex="1"
-                GridPane.rowSpan="3"
-                GridPane.rowIndex="3"
-                GridPane.valignment="CENTER"
-                GridPane.halignment="CENTER"
-                translateY="10"
-                onAction="#expandButtonPressed"/>
-        <!-- end of the expand button -->
     <stylesheets>
         <URL value="@clock.css"/>
     </stylesheets>

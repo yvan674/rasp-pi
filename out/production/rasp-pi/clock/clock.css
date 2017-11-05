@@ -22,14 +22,3 @@
     -fx-background-color: #d5d5d5;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.23),28,0.4,0,0);
 }
-
-#elite-button {
-    -fx-background-color: transparent;
-    -fx-graphic: url("media/elite-logo.png");
-}
-
-#sleep-button {
-    -fx-background-color: transparent;
-    -fx-graphic: url("media/sleep.png");
-    -fx-translate-x: 2px;
-}
